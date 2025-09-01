@@ -19,10 +19,10 @@ const io = new Server(server, {
 const chatHistory = [];
 
 io.on("connection", (socket) => {
-  console.log("✅ New User connected");
+  console.log("New User connected");
 
   socket.on("disconnect", () => {
-    console.log("❌ User disconnected");
+    console.log("User disconnected");
   });
 
   socket.on("message", async (data) => {
@@ -38,6 +38,6 @@ io.on("connection", (socket) => {
 
 // Run server
 server.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
-  console.log(`🌐 Allowed frontend: ${FRONTEND_URL}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Allowed frontend: ${FRONTEND_URL}`);
 });
